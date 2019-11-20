@@ -1,7 +1,7 @@
-from keras import backend as K
-from keras.engine.topology import Layer
-from keras.layers import Dense, Activation, Multiply, Add, Lambda
-from keras.initializers import Constant
+import tensorflow.keras.backend as K
+from tensorflow.keras.engine.topology import Layer
+from tensorflow.keras.layers import Dense, Activation, Multiply, Add, Lambda
+from tensorflow.keras.initializers import Constant
 
 
 class Highway(Layer):

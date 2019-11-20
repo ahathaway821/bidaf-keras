@@ -1,5 +1,5 @@
-from keras.engine.topology import Layer
-from keras import backend as K
+from tensorflow.keras.engine.topology import Layer
+import tensorflow.keras.backend as K
 
 
 class MergedContext(Layer):

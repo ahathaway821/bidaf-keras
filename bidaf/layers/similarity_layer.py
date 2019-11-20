@@ -1,6 +1,6 @@
-from keras.engine.topology import Layer
-from keras.activations import linear
-from keras import backend as K
+from tensorflow.keras.engine.topology import Layer
+from tensorflow.keras.activations import linear
+import tensorflow.keras.backend as K
 
 
 class Similarity(Layer):

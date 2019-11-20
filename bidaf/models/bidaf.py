@@ -1,7 +1,7 @@
-from keras.layers import Input, TimeDistributed, LSTM, Bidirectional
-from keras.models import Model, load_model
-from keras.optimizers import Adadelta
-from keras.callbacks import CSVLogger, ModelCheckpoint
+from tensorflow.keras.layers import Input, TimeDistributed, LSTM, Bidirectional
+from tensorflow.keras.models import Model, load_model
+from tensorflow.keras.optimizers import Adadelta
+from tensorflow.keras.callbacks import CSVLogger, ModelCheckpoint
 from ..layers import Highway, Similarity, C2QAttention, Q2CAttention, MergedContext, SpanBegin, SpanEnd, CombineOutputs
 from ..scripts import negative_avg_log_error, accuracy, tokenize, MagnitudeVectors, get_best_span, \
     get_word_char_loc_mapping

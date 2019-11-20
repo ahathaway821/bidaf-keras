@@ -5,9 +5,9 @@ fasteners==0.14.1
 gast==0.2.2
 grpcio==1.20.0
 h5py==2.9.0
-Keras==2.2.4
-Keras-Applications==1.0.7
-Keras-Preprocessing==1.0.9
+tensorflow.keras==2.2.4
+tensorflow.keras-Applications==1.0.7
+tensorflow.keras-Preprocessing==1.0.9
 lz4==2.1.6
 Markdown==3.1
 mock==2.0.0

@@ -6,13 +6,13 @@ with open("README.md", "r") as fh:
 
 # This call to setup() does all the work
 setuptools.setup(
-    name="bidaf-keras",
+    name="bidaf-tensorflow.keras",
     version="1.0.0",
-    description="Implementation of Bidirectional Attention Flow for Machine Comprehension in Keras 2",
+    description="Implementation of Bidirectional Attention Flow for Machine Comprehension in tensorflow.keras 2",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ParikhKadam/bidaf-keras",
-    download_url="https://github.com/ParikhKadam/bidaf-keras/archive/v-1.0.0.tar.gz",
+    url="https://github.com/ParikhKadam/bidaf-tensorflow.keras",
+    download_url="https://github.com/ParikhKadam/bidaf-tensorflow.keras/archive/v-1.0.0.tar.gz",
     author="Kadam Parikh",
     author_email="parikhkadam@gmail.com",
     license="MIT",
@@ -24,14 +24,14 @@ setuptools.setup(
     ],
     packages=setuptools.find_packages(),
     include_package_data=True,
-    install_requires=["pymagnitude", "keras", "tqdm", "nltk"],
+    install_requires=["pymagnitude", "tensorflow.keras", "tqdm", "nltk"],
     extras_require={
         "cpu": ["tensorflow"],
         "gpu": ["tensorflow-gpu"],
     },
     entry_points={
         "console_scripts": [
-            "bidaf-keras=bidaf.__main__:main",
+            "bidaf-tensorflow.keras=bidaf.__main__:main",
         ]
     },
 )

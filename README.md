@@ -1,5 +1,5 @@
-# bidaf-keras
-Implementation of [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603) in Keras 2
+# bidaf-tensorflow.keras
+Implementation of [Bidirectional Attention Flow for Machine Comprehension](https://arxiv.org/abs/1611.01603) in tensorflow.keras 2
 
 ## What is this project about?
 Machine Comprehension is a task in the field of NLP & NLU where the machine is provided with a passage and a question, and the machine tries to find an answer to the asked question from that given passage, by understanding the syntax and semantics of human language (here, English) and by establishing and understanding the relations betweeen the passage and the question.
@@ -20,30 +20,30 @@ Checkout this video to understand more:
 - CUDA and cuDNN support for Tensorflow GPU (not mandatory, but it's better to have it)
 
 ## Installation
-Execute this command `pip install bidaf-keras`
+Execute this command `pip install bidaf-tensorflow.keras`
 
 Note that the above code won't install tensorflow as there is no way to detecting if your system has GPU while installing this package. But you can explicitly mention if you want to install tensorflow (CPU/GPU) while installing this package.
 
 - Installing Tensorflow CPU along with this package:
   
-  Execute this command `pip install bidaf-keras[cpu]`
+  Execute this command `pip install bidaf-tensorflow.keras[cpu]`
 
 - Installing Tensorflow GPU along with this package:
   
-  Execute this command `pip install bidaf-keras[gpu]`
+  Execute this command `pip install bidaf-tensorflow.keras[gpu]`
 
 ## Usage
 This project is available for use as a complete module. You can use this project via command-line arguments or by importing functionalities from it.:
 
 - **Usage via command-line arguments:**
   
-  To see the usage info, run `python3 -m bidaf --help` or `bidaf-keras --help`.
+  To see the usage info, run `python3 -m bidaf --help` or `bidaf-tensorflow.keras --help`.
 
   Using this module via command-line arguments will provide you with limited functionalities. To get the real power, we recommend using it by importing its functionalities.
   
   The CLI mode will provide you with two basic functionalities: train and predict.
   
-  - **Train:** To get usage information for training models, run `python3 -m bidaf train --help` or `bidaf-keras train --help`
+  - **Train:** To get usage information for training models, run `python3 -m bidaf train --help` or `bidaf-tensorflow.keras train --help`
     
     For example:
     
@@ -52,10 +52,10 @@ This project is available for use as a complete module. You can use this project
     ```
     or
     ```
-    bidaf-keras --model_name=bidaf_50.h5 --do_lowercase train --epochs=1 --steps_per_epoch=1 --validation_steps=1
+    bidaf-tensorflow.keras --model_name=bidaf_50.h5 --do_lowercase train --epochs=1 --steps_per_epoch=1 --validation_steps=1
     ```
   
-  - **Predict:** To get usage information for running predictions on a model, run `python3 -m bidaf predict --help` or `bidaf-keras predict --help`
+  - **Predict:** To get usage information for running predictions on a model, run `python3 -m bidaf predict --help` or `bidaf-tensorflow.keras predict --help`
     
     For example:
      ```
@@ -63,7 +63,7 @@ This project is available for use as a complete module. You can use this project
      ```
      or
      ```
-     bidaf-keras --model_name=bidaf_50.h5 --do_lowercase predict --passage "This is tree." --question "What is this?" --return_char_loc --return_confidence_score
+     bidaf-tensorflow.keras --model_name=bidaf_50.h5 --do_lowercase predict --passage "This is tree." --question "What is this?" --return_char_loc --return_confidence_score
      ```
    
   **Note** that, some parameters like "--do_lowercase" are dependent on some other parameters like "--model_name". For example, if the model is trained to perform predictions on lowercase inputs, it might not work well if the inputs are not in lowercase.
@@ -81,7 +81,7 @@ This project is available for use as a complete module. You can use this project
     bidaf_model = BidirectionalAttentionFlow(400)
     bidaf_model.load_bidaf("/path/to/model.h5") # when you want to resume training
     train_generator, validation_generator = load_data_generators(24, 400)
-    keras_model = bidaf_model.train_model(train_generator, validation_generator=validation_generator)
+    tensorflow.keras_model = bidaf_model.train_model(train_generator, validation_generator=validation_generator)
     ```
   - **Predict:**
     ```
@@ -92,7 +92,7 @@ This project is available for use as a complete module. You can use this project
     ```
   **Note** that the above are the simplest code snippets. You can explore all functionalities available by looking at the parameters avaiable at different level. If you can't understand the parameters, just open an issue here. We may write the usage of all parameters in future if required.
     
-  **Also note** that, in the above snippets, `bidaf_model` is just an object of class `BidirectionalAttentionFlow` and not the real Keras model. You can access the Keras model by using `keras_model = bidaf_model.model`.
+  **Also note** that, in the above snippets, `bidaf_model` is just an object of class `BidirectionalAttentionFlow` and not the real tensorflow.keras model. You can access the tensorflow.keras model by using `tensorflow.keras_model = bidaf_model.model`.
 
 ## Features
 - Supports both SQUAD-v1.1 and SQUAD-v2.0.
@@ -157,8 +157,8 @@ This project is available for use as a complete module. You can use this project
   1. ...
 - Solved:
   1. https://github.com/tensorflow/tensorflow/issues/24519
-  2. https://github.com/keras-team/keras/issues/11978
-  3. https://github.com/keras-team/keras/issues/12263
+  2. https://github.com/tensorflow.keras-team/tensorflow.keras/issues/11978
+  3. https://github.com/tensorflow.keras-team/tensorflow.keras/issues/12263
 
 ## Contributions
 Thoughts, samples codes, modifications and any other type of contributions are appreciated. This is my first project in Deep Learning and also first being open source. I will need as much help as possible as I don't know the path I need to follow. Thank you..

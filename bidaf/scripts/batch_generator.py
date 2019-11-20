@@ -1,11 +1,11 @@
-from keras.utils import Sequence
+from tensorflow.keras.utils import Sequence
 import os
 import numpy as np
 from .magnitude import MagnitudeVectors
 
 
 class BatchGenerator(Sequence):
-    'Generates data for Keras'
+    'Generates data for tensorflow.keras'
 
     vectors = None
 

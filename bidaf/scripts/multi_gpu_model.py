@@ -1,5 +1,5 @@
-from keras import Model
-from keras.utils import multi_gpu_model
+from tensorflow.keras import Model
+from tensorflow.keras.utils import multi_gpu_model
 
 
 class ModelMGPU(Model):

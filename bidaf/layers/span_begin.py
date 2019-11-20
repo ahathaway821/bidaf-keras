@@ -1,7 +1,7 @@
-from keras.engine.topology import Layer
-from keras.layers.advanced_activations import Softmax
-from keras.layers import TimeDistributed, Dense
-from keras import backend as K
+from tensorflow.keras.engine.topology import Layer
+from tensorflow.keras.layers.advanced_activations import Softmax
+from tensorflow.keras.layers import TimeDistributed, Dense
+import tensorflow.keras.backend as K
 
 
 class SpanBegin(Layer):
