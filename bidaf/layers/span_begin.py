@@ -1,5 +1,5 @@
 from tensorflow.keras.layers import Layer
-from tensorflow.keras.layers.advanced_activations import Softmax
+from tensorflow.keras.layers import Softmax
 from tensorflow.keras.layers import TimeDistributed, Dense
 import tensorflow.keras.backend as K
 
