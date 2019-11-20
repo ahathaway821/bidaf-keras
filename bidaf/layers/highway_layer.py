@@ -1,5 +1,5 @@
 import tensorflow.keras.backend as K
-from tensorflow.keras.engine.topology import Layer
+from tensorflow.keras.layers import Layer
 from tensorflow.keras.layers import Dense, Activation, Multiply, Add, Lambda
 from tensorflow.keras.initializers import Constant
 

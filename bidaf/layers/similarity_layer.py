@@ -1,4 +1,4 @@
-from tensorflow.keras.engine.topology import Layer
+from tensorflow.keras.layers import Layer
 from tensorflow.keras.activations import linear
 import tensorflow.keras.backend as K
 
